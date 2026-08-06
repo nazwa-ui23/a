@@ -1,0 +1,72 @@
+<div id="admin-dashboard-view" class="page-view">
+    <div style="display: flex; justify-content: space-between; align-items: center; max-width: 600px; margin: 0 auto 15px auto;">
+        <button class="btn-back-nav" onclick="openAdminMainMenu()">
+            <i class="fas fa-arrow-left"></i> Sebelumnya
+        </button>
+        <span style="font-size: 0.9rem; font-weight: bold; color: var(--dark-green);">Dashboard Admin</span>
+    </div>
+
+    <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 20px;">
+        <button class="admin-sub-btn" id="btn-tab-input" onclick="switchAdminDashTab('input')">
+            <i class="fas fa-plus-circle"></i> Input Barang
+        </button>
+        <button class="admin-sub-btn" id="btn-tab-view" style="background-color: var(--accent-green);" onclick="switchAdminDashTab('view')">
+            <i class="fas fa-boxes"></i> View Produk
+        </button>
+    </div>
+
+    <div id="admin-sub-input" class="admin-card-container">
+        <h3 style="color: var(--dark-green); margin-bottom: 15px; font-size: 1.1rem; text-align: center;">
+            <i class="fas fa-box-open"></i> Form Input Barang Baru
+        </h3>
+        <form onsubmit="handleAdminAddProduct(event)">
+            <div class="form-group">
+                <label>Upload Foto Produk (Dari Galeri):</label>
+                <input type="file" id="admin-prod-file" accept="image/*" class="form-input" onchange="previewUploadImage(event)" required>
+                <div class="preview-img-box" id="preview-container">
+                    <span style="color: var(--text-muted); font-size: 0.75rem;" id="preview-text">Pratinjau foto dari galeri akan muncul di sini</span>
+                    <img id="preview-img" src="" alt="Pratinjau" style="display: none;">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="admin-prod-name">Nama Produk Sepatu:</label>
+                <input type="text" id="admin-prod-name" class="form-input" placeholder="contoh: Nike Air Jordan 1 Retro" required>
+            </div>
+
+            <div class="form-group">
+                <label for="admin-prod-price">Harga Produk (Rp):</label>
+                <input type="number" id="admin-prod-price" class="form-input" placeholder="contoh: 2500000" min="1000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="admin-prod-desc">Deskripsi Produk:</label>
+                <textarea id="admin-prod-desc" class="form-input" rows="3" placeholder="Masukkan deskripsi keunggulan dan bahan sepatu..." style="resize: vertical; font-family: inherit;" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-auth" style="background-color: var(--dark-green);">
+                <i class="fas fa-upload"></i> Tambahkan Barang ke Toko
+            </button>
+        </form>
+    </div>
+
+    <div id="admin-sub-view" class="admin-card-container" style="display: none;">
+        <h3 style="color: var(--dark-green); margin-bottom: 15px; font-size: 1.1rem; text-align: center;">
+            <i class="fas fa-list"></i> Daftar Seluruh Produk Toko
+        </h3>
+        <div class="table-responsive">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Nama Produk</th>
+                        <th>Harga</th>
+                        <th>Terjual</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody id="admin-product-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
