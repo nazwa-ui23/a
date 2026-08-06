@@ -1,0 +1,40 @@
+<div id="view-checkout" class="page-view">
+    <div class="section-title" style="justify-content: center;"><i class="fas fa-file-invoice"></i> Konfirmasi Pesanan</div>
+
+    <div class="checkout-box">
+        <strong>Alamat Pengiriman:</strong>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px;">
+            <strong id="checkout-display-name">Azariya</strong> (<span id="checkout-display-phone">+62 812-3456-7890</span>)<br>
+            <span id="checkout-display-address">Jl. Cempaka Indah No. 45, Komplek Green Residence, Jakarta Selatan</span>
+        </p>
+    </div>
+
+    <div class="checkout-box">
+        <strong>Metode Pembayaran:</strong>
+        <div class="payment-method">
+            <i class="fas fa-hand-holding-usd" style="font-size: 1.4rem;"></i>
+            <div>
+                <div>Bayar di Tempat (COD)</div>
+                <small style="font-weight: normal; font-size: 0.75rem; color: #444;">Bayar tunai saat sepatu sampai di rumah</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="checkout-box">
+        <strong>Ringkasan Produk:</strong>
+        <div id="checkout-summary-items" style="margin-top: 10px;"></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-top:8px; color: var(--text-muted);">
+            <span>Ongkos Kirim (Flat):</span>
+            <strong>Rp 5.000</strong>
+        </div>
+        <hr style="margin: 10px 0; border: none; border-top: 1px dashed #ccc;">
+        <div style="display: flex; justify-content: space-between; font-weight: bold;">
+            <span>Total Tagihan:</span>
+            <span id="checkout-total-price" style="color: var(--dark-green);">Rp 0</span>
+        </div>
+    </div>
+
+    <button class="btn btn-buy" style="width: 100%; padding: 12px; font-size: 0.9rem;" onclick="processCheckout()">
+        <i class="fas fa-check-circle"></i> Klik Checkout
+    </button>
+</div>
