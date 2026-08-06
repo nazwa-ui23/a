@@ -1,0 +1,24 @@
+<div id="admin-login-screen" class="auth-overlay">
+    <div class="auth-card">
+        <i class="fas fa-lock" style="font-size: 2.5rem; color: var(--primary-green); margin-bottom: 10px;"></i>
+        <h2>Login Admin</h2>
+        <p>Masukkan kata sandi khusus administrator</p>
+        <form onsubmit="handleAdminLogin(event)">
+            <div class="form-group">
+                <label for="admin-username">Nama Pengguna (Username)</label>
+                <input type="text" id="admin-username" class="form-input" placeholder="Masukkan username admin" required>
+            </div>
+            <div class="form-group">
+                <label for="admin-password">Kata Sandi (Password)</label>
+                <input type="password" id="admin-password" class="form-input" placeholder="••••••••" required>
+            </div>
+            <p id="admin-login-error" style="color: #e63946; font-size: 0.8rem; display: none; margin-bottom: 10px;">
+                Username atau Kata Sandi salah!
+            </p>
+            <button type="submit" class="btn-auth">Masuk Admin <i class="fas fa-sign-in-alt"></i></button>
+            <button type="button" class="btn-auth" style="background-color: var(--accent-green); margin-top: 8px;" onclick="backToRoleSelection()">
+                <i class="fas fa-arrow-left"></i> Kembali
+            </button>
+        </form>
+    </div>
+</div>
