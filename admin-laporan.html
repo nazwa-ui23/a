@@ -1,0 +1,44 @@
+<div id="admin-reports-view" class="page-view">
+    <div style="display: flex; justify-content: space-between; align-items: center; max-width: 600px; margin: 0 auto 15px auto;">
+        <button class="btn-back-nav" onclick="openAdminMainMenu()">
+            <i class="fas fa-arrow-left"></i> Sebelumnya
+        </button>
+        <span style="font-size: 0.9rem; font-weight: bold; color: var(--dark-green);">Laporan Penjualan</span>
+    </div>
+
+    <p style="text-align: center; font-size: 1rem; color: var(--dark-green); font-weight: 600; margin-bottom: 15px;">
+        Pilih Jenis Laporan Penjualan:
+    </p>
+
+    <div class="report-btn-group">
+        <button class="admin-sub-btn" style="width: 100%;" onclick="showReportType('harian')">
+            <i class="fas fa-calendar-day"></i> Laporan Harian
+        </button>
+        <div class="report-btn-row">
+            <button class="admin-sub-btn" style="flex: 1;" onclick="showReportType('bulanan')">
+                <i class="fas fa-calendar-alt"></i> Laporan Bulanan
+            </button>
+            <button class="admin-sub-btn" style="flex: 1; background-color: var(--primary-green);" onclick="showReportType('tahunan')">
+                <i class="fas fa-chart-line"></i> Laporan Tahunan
+            </button>
+        </div>
+    </div>
+
+    <div class="admin-card-container" id="report-result-box">
+        <h4 id="report-title" style="color: var(--dark-green); text-align: center; margin-bottom: 10px;">
+            Laporan Harian Penjualan
+        </h4>
+        <div class="table-responsive">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Periode</th>
+                        <th>Total Transaksi</th>
+                        <th>Total Pendapatan</th>
+                    </tr>
+                </thead>
+                <tbody id="report-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
