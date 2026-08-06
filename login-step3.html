@@ -1,0 +1,17 @@
+<div id="auth-step-3" class="auth-overlay">
+    <div class="auth-card">
+        <h2>Kontak & Alamat</h2>
+        <p>Masukkan nomor telepon dan alamat pengiriman kamu</p>
+        <form onsubmit="handleAuthStep3(event)">
+            <div class="form-group">
+                <label for="input-phone">Nomor Telepon</label>
+                <input type="tel" id="input-phone" class="form-input" placeholder="contoh: +62 812-3456-7890" required>
+            </div>
+            <div class="form-group">
+                <label for="input-address">Alamat Pengiriman Utama</label>
+                <textarea id="input-address" class="form-input" rows="3" placeholder="Jl. Cempaka Indah No. 45, Jakarta..." style="resize: vertical; font-family: inherit;" required></textarea>
+            </div>
+            <button type="submit" class="btn-auth">Masuk / Daftar <i class="fas fa-check"></i></button>
+        </form>
+    </div>
+</div>
